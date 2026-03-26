@@ -1,0 +1,13 @@
+{
+  "id": "file-hub",
+  "name": "File Hub",
+  "icon": "folder",
+  "description": "Company file/document center: policies, contracts, templates, onboarding packets, invoices",
+  "version": "1.0.0",
+  "capabilities": ["document_control"],
+  "pages": [
+    { "id": "files-all", "label": "All Files", "route": "/", "icon": "folder" },
+    { "id": "files-policies", "label": "Policies", "route": "/policies", "icon": "fileSearch" },
+    { "id": "files-templates", "label": "Templates", "route": "/templates", "icon": "file" }
+  ]
+}
