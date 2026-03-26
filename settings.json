@@ -4,10 +4,42 @@
   "icon": "folder",
   "description": "Company file/document center: policies, contracts, templates, onboarding packets, invoices",
   "version": "1.0.0",
-  "capabilities": ["document_control"],
+  "capabilities": [
+    "document_control"
+  ],
   "pages": [
-    { "id": "files-all", "label": "All Files", "route": "/", "icon": "folder" },
-    { "id": "files-policies", "label": "Policies", "route": "/policies", "icon": "fileSearch" },
-    { "id": "files-templates", "label": "Templates", "route": "/templates", "icon": "file" }
+    {
+      "id": "files-all",
+      "label": "All Files",
+      "route": "/",
+      "icon": "folder",
+      "capability": "document_control",
+      "hostRoute": "/files",
+      "hostMatchRoutes": [
+        "/files"
+      ]
+    },
+    {
+      "id": "files-policies",
+      "label": "Policies",
+      "route": "/policies",
+      "icon": "fileSearch",
+      "capability": "document_control",
+      "hostRoute": "/files/policies",
+      "hostMatchRoutes": [
+        "/files/policies"
+      ]
+    },
+    {
+      "id": "files-templates",
+      "label": "Templates",
+      "route": "/templates",
+      "icon": "file",
+      "capability": "document_control",
+      "hostRoute": "/files/templates",
+      "hostMatchRoutes": [
+        "/files/templates"
+      ]
+    }
   ]
 }
